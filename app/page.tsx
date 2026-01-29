@@ -1,5 +1,5 @@
-import { ComponentExample } from "@/components/ComponentExample";
+import HeroSection from "@/components/HeroSection";
 
 export default function Page() {
-	return <ComponentExample />;
+	return <HeroSection />;
 }

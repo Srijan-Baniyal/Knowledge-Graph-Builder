@@ -45,6 +45,7 @@
       "includes": [
         "app/**",
         "components/ui/**",
+        "hooks/**",
         "*.config.*",
         "*.json",
         "*.lock"
@@ -53,6 +54,11 @@
         "rules": {
           "style": {
             "useFilenamingConvention": {
+              "level": "off"
+            }
+          },
+          "suspicious": {
+            "noDocumentCookie": {
               "level": "off"
             }
           }

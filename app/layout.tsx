@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import { ReactQueryProvider } from "../providers/ReactQueryProvider";
 import { ThemeProvider } from "../providers/ThemeProvider";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -33,9 +34,12 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<ThemeProvider>
-					<ReactQueryProvider>{children}</ReactQueryProvider>
+					<ReactQueryProvider>
+						<Navigation />
+						{children}
+						<Toaster />
+					</ReactQueryProvider>
 				</ThemeProvider>
-				<Toaster />
 			</body>
 		</html>
 	);
