@@ -543,7 +543,7 @@ export default function HeroSection() {
 								}}
 							>
 								<Button className="group" size="lg">
-									<Link className="flex items-center gap-2" href="/dashboard">
+									<Link className="flex items-center gap-2" href="/about">
 										Get Started
 										<ArrowRightIcon
 											className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -552,7 +552,7 @@ export default function HeroSection() {
 									</Link>
 								</Button>
 								<Button className="group" size="lg" variant="outline">
-									<Link className="flex items-center gap-2" href="#features">
+									<Link className="flex items-center gap-2" href="/demo">
 										<PlayIcon
 											className="mr-2 size-4 transition-transform duration-300 group-hover:scale-110"
 											weight="fill"
@@ -820,7 +820,10 @@ export default function HeroSection() {
 							</p>
 							<div className="flex flex-wrap items-center justify-center gap-4">
 								<Button className="group" size="lg">
-									<Link className="flex items-center gap-2" href="/dashboard">
+									<Link
+										className="flex items-center gap-2"
+										href="/learning/architecture"
+									>
 										Start Learning Now
 										<ArrowRightIcon
 											className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1"
