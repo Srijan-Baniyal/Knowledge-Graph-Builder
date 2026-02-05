@@ -37,7 +37,8 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "double"
-    }
+    },
+    "globals": ["Bun"]
   },
   "assist": {
     "enabled": true,
@@ -53,7 +54,9 @@
       "includes": [
         "app/**",
         "components/ui/**",
+        "components/viewtran/**",
         "hooks/**",
+        "lib/**",
         "*.config.*",
         "*.json",
         "*.lock"
@@ -67,6 +70,11 @@
           },
           "suspicious": {
             "noDocumentCookie": {
+              "level": "off"
+            }
+          },
+          "performance": {
+            "noBarrelFile": {
               "level": "off"
             }
           }

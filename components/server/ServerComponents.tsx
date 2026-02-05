@@ -56,7 +56,7 @@ interface PokemonListResponse {
 }
 
 interface NeinResponse {
-	message: string;
+	reason: string;
 }
 
 // Error component for inline error display
@@ -205,7 +205,7 @@ async function ServerStats() {
 		const neinResponse =
 			neinResult.status === "fulfilled"
 				? neinResult.value.data
-				: { message: "Nein! (API unavailable)" };
+				: { reason: "Nein! (API unavailable)" };
 
 		// Calculate individual request status
 		const pokemonStatus =
@@ -286,9 +286,7 @@ async function ServerStats() {
 					</div>
 					<div className="rounded-2xl border border-border/40 bg-background/50 p-6 backdrop-blur-sm">
 						<p className="mb-3 text-muted-foreground text-sm">API Response</p>
-						<p className="font-mono text-lg">
-							{neinResponse.message || "Nein!"}
-						</p>
+						<p className="font-mono text-lg">{neinResponse.reason}</p>
 						{neinResult.status === "rejected" && (
 							<p className="mt-3 text-muted-foreground text-sm">
 								Using fallback response

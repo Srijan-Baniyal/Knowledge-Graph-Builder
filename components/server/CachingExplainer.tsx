@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -12,7 +13,7 @@ interface PokemonListResponse {
 
 // Example 1: Time-based revalidation
 async function TimeBasedCacheExample() {
-	// In Next.js, you can configure cache behavior like this:
+	await headers();
 	const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=3", {
 		next: { revalidate: 60 }, // Revalidate every 60 seconds
 	});
